@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "build": "build": "echo 'No build step required'",
+    "build": "echo 'No build step required'",
     "check": "node --check js/config.js && node --check js/env.js && node --check js/ui.js && node --check js/supabase.js && node --check js/cliente.js && node --check js/admin.js"
   },
   "engines": {
