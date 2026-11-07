@@ -1,0 +1,1378 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#260212" />
+    <title>Konys Pizza — La pizza más icónica de Bucaramanga</title>
+    <meta
+      name="description"
+      content="Reserva tu mesa en Konys Pizza, Cra. 36 con calle 41, Bucaramanga. Salón y terraza, masa artesanal y la pizza más icónica de la ciudad."
+    />
+    <meta property="og:title" content="Konys Pizza — Reserva tu mesa" />
+    <meta
+      property="og:description"
+      content="Masa artesanal, horno de piedra y terraza en Bucaramanga. Reserva sin llamar."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/hero-pizza.webp" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/anton-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/inter-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="assets/img/hero-pizza.webp" as="image" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- Sprite de iconos -->
+    <svg
+      width="0"
+      height="0"
+      aria-hidden="true"
+      focusable="false"
+      style="position: absolute"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path
+          d="M5 12h14M13 6l6 6-6 6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path
+          d="M7 17 17 7M8 7h9v9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <rect
+          x="3.5"
+          y="5"
+          width="17"
+          height="15.5"
+          rx="2.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M7.5 3v4M16.5 3v4M3.5 9.5h17"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle
+          cx="9"
+          cy="8"
+          r="3.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M3.5 19.5c0-3 2.5-5.2 5.5-5.2s5.5 2.2 5.5 5.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+        <path
+          d="M16 5.4a3.2 3.2 0 0 1 0 6.2M17 14.6c2.2.4 3.8 2.3 3.8 4.9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path
+          d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="12"
+          cy="10"
+          r="2.6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle
+          cx="12"
+          cy="12"
+          r="8.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M12 7.5V12l3 2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M7.2 3.5 9 7.4l-2.1 1.5a12 12 0 0 0 6.2 6.2l1.5-2.1 3.9 1.8-.7 3.5c-.2.9-1 1.4-1.9 1.3C9.2 18.8 5.2 14.8 4.4 7.1c-.1-.9.4-1.7 1.3-1.9l1.5-.7Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24">
+        <path
+          d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.6a8.4 8.4 0 1 1 15.6-4.3Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8.3 7.4c.2-.4.5-.5.8-.5h.6c.2 0 .4.1.5.5l.8 1.9c.1.2 0 .5-.2.7l-.7.7c-.2.2-.2.4-.1.6.5.9 1.3 1.7 2.2 2.2.2.1.4.1.6-.1l.7-.7c.2-.2.4-.3.7-.2l1.9.8c.3.1.5.3.5.6v.7c0 .8-.7 1.5-1.5 1.6-3.6.4-7.6-3.6-7.9-7.2 0-.4.1-.8.3-1.1Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect
+          x="3.5"
+          y="3.5"
+          width="17"
+          height="17"
+          rx="5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+      </symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24">
+        <path
+          d="M14.5 8.2h2.4V4.5h-2.7c-2.7 0-4.4 1.7-4.4 4.4v2.2H7.4v3.6h2.4V20h3.8v-5.3h2.5l.5-3.6h-3V9.2c0-.7.3-1 1-1Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24">
+        <path
+          d="M14.5 4v9.4a4.1 4.1 0 1 1-3.5-4V13a1.9 1.9 0 1 0 1.4 1.8V4h2.1c.4 2 1.8 3.4 4 3.6v2.6c-1.6 0-3-.5-4-1.4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-key" viewBox="0 0 24 24">
+        <circle
+          cx="8"
+          cy="12"
+          r="3.7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M11.7 12H21M17 12v3M14 12v2.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-chev-left" viewBox="0 0 24 24">
+        <path
+          d="m14.5 5-7 7 7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-chev-right" viewBox="0 0 24 24">
+        <path
+          d="m9.5 5 7 7-7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path
+          d="m4.5 12.5 5 5 10-11"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24">
+        <path
+          d="M12 3.5 21 20H3L12 3.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 9v5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <circle cx="12" cy="17.1" r="1" fill="currentColor" />
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24">
+        <circle
+          cx="12"
+          cy="12"
+          r="8.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M12 10.5V17"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <circle cx="12" cy="7.6" r="1" fill="currentColor" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path
+          d="m6 6 12 12M18 6 6 18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24">
+        <path
+          d="M12.2 2.8c.6 3-2.8 4.1-2.8 7.1 0 1.2.7 2.2 1.8 2.6-.1-2 1.1-3.2 2.3-4.4 2 2.1 3.7 4.3 3.7 7.2a5.2 5.2 0 0 1-10.4 0c0-4.4 3-6.8 5.4-12.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-pizza" viewBox="0 0 24 24">
+        <path
+          d="M12 3 21 20c-5.8 2.3-12.2 2.3-18 0L12 3Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+        />
+        <circle cx="12" cy="11.5" r="1.4" fill="currentColor" />
+        <circle cx="8.5" cy="16.5" r="1.2" fill="currentColor" />
+        <circle cx="15.5" cy="16.5" r="1.2" fill="currentColor" />
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect
+          x="4.5"
+          y="10"
+          width="15"
+          height="10.5"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M8 10V7a4 4 0 0 1 8 0v3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle cx="12" cy="15.2" r="1.2" fill="currentColor" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path
+          d="M12 2.8c.6 5.2 4 8.6 9.2 9.2-5.2.6-8.6 4-9.2 9.2-.6-5.2-4-8.6-9.2-9.2 5.2-.6 8.6-4 9.2-9.2Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ============================ NAV ============================ -->
+    <header class="site-header" id="site-header">
+      <div class="container nav">
+        <a class="brand" href="#inicio" aria-label="Konys Pizza, ir al inicio">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <path
+                d="M20 3 35 33c-10 4.4-20 4.4-30 0L20 3Z"
+                fill="currentColor"
+              />
+              <circle cx="20" cy="19" r="2.3" fill="#260212" />
+              <circle cx="14.5" cy="26" r="2" fill="#260212" />
+              <circle cx="25.5" cy="26" r="2" fill="#260212" />
+              <path
+                d="M5 33c10 4.4 20 4.4 30 0"
+                fill="none"
+                stroke="#ffc7c6"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="brand__text"
+            >KONYS<span class="brand__sub">PIZZERÍA · BGA</span></span
+          >
+        </a>
+
+        <nav class="nav__links" aria-label="Navegación principal">
+          <a class="nav__link" href="#inicio">Inicio</a>
+          <a class="nav__link" href="#mesas">Mesas</a>
+          <a class="nav__link" href="#carta">Carta</a>
+          <a class="nav__link" href="#reservar">Reservar</a>
+          <a class="nav__link" href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a
+            class="nav__admin"
+            href="admin.html"
+            aria-label="Acceso al panel de administración"
+            title="Panel de administración"
+          >
+            <svg><use href="#i-key"></use></svg>
+          </a>
+          <a class="btn btn--primary" href="#reservar"
+            >Reserva tu mesa
+            <svg class="btn__arrow"><use href="#i-arrow"></use></svg
+          ></a>
+          <button
+            class="icon-btn nav__toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menú"
+          >
+            <span class="nav__toggle-lines" aria-hidden="true"
+              ><span></span><span></span><span></span
+            ></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-menu__links" aria-label="Navegación móvil">
+        <a class="mobile-menu__link" href="#inicio"><span>01</span> Inicio</a>
+        <a class="mobile-menu__link" href="#mesas"><span>02</span> Mesas</a>
+        <a class="mobile-menu__link" href="#carta"><span>03</span> Carta</a>
+        <a class="mobile-menu__link" href="#reservar"
+          ><span>04</span> Reservar</a
+        >
+        <a class="mobile-menu__link" href="#contacto"
+          ><span>05</span> Contacto</a
+        >
+      </nav>
+      <div class="mobile-menu__foot">
+        <a class="btn btn--primary btn--lg btn--block" href="#reservar"
+          >Reservar una mesa
+          <svg class="btn__arrow"><use href="#i-arrow"></use></svg
+        ></a>
+        <p class="mobile-menu__meta">
+          Cra. 36 con calle 41<br />Bucaramanga, Santander<br />+57 300 000 0000
+        </p>
+        <a class="mobile-menu__admin" href="admin.html"
+          ><svg width="13" height="13"><use href="#i-key"></use></svg> Acceso
+          administración</a
+        >
+      </div>
+    </div>
+
+    <main id="contenido">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__photo hero__photo--a" aria-hidden="true">
+          <img
+            src="assets/img/hero-pizza.webp"
+            alt=""
+            width="1100"
+            height="733"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__photo hero__photo--b" aria-hidden="true">
+          <img
+            src="assets/img/hero-slice.webp"
+            alt=""
+            width="1100"
+            height="734"
+          />
+        </div>
+        <div class="hero__photo hero__photo--c" aria-hidden="true">
+          <img src="assets/img/harina.webp" alt="" width="1100" height="880" />
+        </div>
+        <span class="hero__photo-tag hero__photo-tag--a" aria-hidden="true"
+          >HORNO DE PIEDRA · 450°</span
+        >
+        <span class="hero__photo-tag hero__photo-tag--b" aria-hidden="true"
+          >MASA MADRE · 48 H</span
+        >
+
+        <div class="container hero__inner">
+          <p class="eyebrow hero__eyebrow">
+            <i class="dot"></i> Pizzería artesanal · Bucaramanga
+          </p>
+          <h1 class="display hero__title" id="hero-title">
+            <span>La pizza más</span>
+            <span class="line-2">icónica</span>
+            <span class="aside">(de la ciudad)</span>
+          </h1>
+          <p class="hero__lead">
+            Masa de fermentación lenta, horno de piedra y una terraza que sabe a
+            viernes. Reserva tu mesa sin llamar, sin filas y sin excusas.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--lg" href="#reservar"
+              >Reservar tu mesa
+              <svg class="btn__arrow"><use href="#i-arrow"></use></svg
+            ></a>
+            <a class="btn btn--ghost btn--lg" href="#carta">Ver la carta</a>
+          </div>
+          <div class="hero__foot">
+            <div>
+              <strong>Cra. 36 con calle 41</strong>Bucaramanga, Santander
+            </div>
+            <div><strong>Salón &amp; terraza</strong>8 mesas disponibles</div>
+            <div><strong>Sin costo de reserva</strong>Confirma en 3 pasos</div>
+          </div>
+        </div>
+
+        <div class="hero__stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs>
+              <path
+                id="stamp-path"
+                d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"
+              />
+            </defs>
+            <text>
+              <textPath href="#stamp-path">
+                MASA ARTESANAL · BUCARAMANGA · DESDE 2019 ·
+              </textPath>
+            </text>
+            <g class="slice" transform="translate(49 49)">
+              <path
+                d="M11 1 21 21c-6.6 2.6-13.4 2.6-20 0L11 1Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linejoin="round"
+              />
+              <circle cx="11" cy="10" r="1.2" fill="currentColor" />
+              <circle cx="7.5" cy="16" r="1" fill="currentColor" />
+              <circle cx="14.5" cy="16" r="1" fill="currentColor" />
+            </g>
+          </svg>
+        </div>
+
+        <a class="hero__scroll" href="#mesas" aria-label="Bajar a las mesas"
+          ><span>Desliza</span><i></i
+        ></a>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Masa madre</span><i>✦</i><span>Horno de piedra</span><i>✦</i
+            ><span>Ingredientes frescos</span><i>✦</i
+            ><span>Terraza al aire libre</span><i>✦</i><span>Bucaramanga</span
+            ><i>✦</i><span>Reservas sin costo</span><i>✦</i>
+          </div>
+          <div class="marquee__group">
+            <span>Masa madre</span><i>✦</i><span>Horno de piedra</span><i>✦</i
+            ><span>Ingredientes frescos</span><i>✦</i
+            ><span>Terraza al aire libre</span><i>✦</i><span>Bucaramanga</span
+            ><i>✦</i><span>Reservas sin costo</span><i>✦</i>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================ MESAS ============================ -->
+      <section
+        class="section section--burgundy"
+        id="mesas"
+        aria-labelledby="mesas-title"
+      >
+        <div class="container">
+          <div class="section__head section__head--split reveal">
+            <div>
+              <p class="bracket section__eyebrow">
+                <svg><use href="#i-chev-right"></use></svg> Elige tu lugar
+                <svg><use href="#i-chev-left"></use></svg>
+              </p>
+              <h2 class="display section__title" id="mesas-title">
+                Nuestras mesas
+              </h2>
+              <p class="section__intro">
+                Consulta la disponibilidad por fecha. Salón para los planes
+                tranquilos, terraza para los que se alargan. Escoge la tuya y
+                seguimos.
+              </p>
+            </div>
+            <div class="section__aside">
+              <div class="legend" aria-label="Convenciones de disponibilidad">
+                <span><i class="free"></i> Libre</span>
+                <span><i class="busy"></i> Ocupada</span>
+                <span><i class="off"></i> No disponible</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar reveal">
+            <div class="toolbar__group">
+              <span class="toolbar__label">Consultar fecha</span>
+              <div class="date-inline">
+                <svg><use href="#i-calendar"></use></svg>
+                <input
+                  type="date"
+                  id="mesas-date"
+                  aria-label="Fecha para consultar disponibilidad de mesas"
+                />
+              </div>
+            </div>
+            <div
+              class="toolbar__group quick-dates"
+              id="quick-dates"
+              aria-label="Fechas rápidas"
+            ></div>
+            <button
+              class="btn btn--sm btn--ghost"
+              id="refresh-mesas"
+              type="button"
+            >
+              <svg><use href="#i-spark"></use></svg> Actualizar
+            </button>
+          </div>
+
+          <div
+            class="mesas-grid"
+            id="mesas-grid"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+          </div>
+          <div class="empty-state" id="mesas-empty" hidden>
+            <strong>No hay mesas disponibles</strong>
+            <p>
+              Prueba con otra fecha o escríbenos por WhatsApp. Seguro
+              encontramos un lugar para ti.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ SOBRE ============================ -->
+      <section class="section" id="sobre" aria-labelledby="sobre-title">
+        <div class="container about">
+          <div class="about__media reveal">
+            <figure class="about__img">
+              <img
+                src="assets/img/sobre-konys.webp"
+                alt="Pizza recién salida del horno en Konys Pizza"
+                width="1100"
+                height="1650"
+                loading="lazy"
+              />
+            </figure>
+            <div class="about__stamp" aria-hidden="true">
+              48 h<small>de fermentación</small>
+            </div>
+          </div>
+          <div class="about__body reveal">
+            <p class="bracket section__eyebrow">
+              <svg><use href="#i-chev-right"></use></svg> Desde la masa
+              <svg><use href="#i-chev-left"></use></svg>
+            </p>
+            <h2
+              class="display section__title section__title--white"
+              id="sobre-title"
+            >
+              No hacemos pizza.<br />Hacemos planes.
+            </h2>
+            <p class="about__copy">
+              En <strong>Konys Pizza</strong> la masa se trabaja sin afán:
+              fermentación lenta, ingredientes frescos y un horno de piedra que
+              hace lo suyo. El resultado se comparte en el salón o en la
+              terraza, con la luz de Bucaramanga de fondo.
+            </p>
+            <p class="about__copy">
+              Reserva tu mesa y llega a lo importante: la conversación, la
+              primera porción y esa discusión eterna sobre quién pidió la
+              última.
+            </p>
+            <div class="about__stats">
+              <div class="stat">
+                <strong>48h</strong><span>Fermentación lenta</span>
+              </div>
+              <div class="stat">
+                <strong>450°</strong><span>Horno de piedra</span>
+              </div>
+              <div class="stat">
+                <strong>08</strong><span>Mesas para ti</span>
+              </div>
+            </div>
+            <div class="about__note">
+              <svg><use href="#i-pin"></use></svg>
+              <p>
+                Estamos en la Cra. 36 con calle 41, Bucaramanga. Salón y terraza
+                disponibles. Abrimos todos los días en dos jornadas: 12:30 p. m.
+                – 2:30 p. m. y 5:00 p. m. – 11:00 p. m.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ CARTA ============================ -->
+      <section
+        class="section section--black"
+        id="carta"
+        aria-labelledby="carta-title"
+      >
+        <div class="container">
+          <div class="section__head section__head--split reveal">
+            <div>
+              <p class="bracket section__eyebrow">
+                <svg><use href="#i-chev-right"></use></svg> Para compartir
+                <svg><use href="#i-chev-left"></use></svg>
+              </p>
+              <h2 class="display section__title" id="carta-title">La carta</h2>
+              <p class="section__intro">
+                Lo que sale del horno y lo que lo acompaña. Precios en pesos
+                colombianos. La carta es informativa: los pedidos para domicilio
+                se gestionan por WhatsApp.
+              </p>
+            </div>
+            <div class="section__aside">
+              <span class="badge badge--neutral"
+                ><i class="badge__dot"></i> Actualizada desde Konys</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="carta-toolbar reveal"
+            id="carta-filters"
+            role="group"
+            aria-label="Filtrar carta por categoría"
+          ></div>
+          <div
+            class="carta-grid"
+            id="carta-grid"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+          </div>
+          <div class="carta-empty" id="carta-empty" hidden>
+            <strong>No hay platos en esta categoría</strong>
+            <p>Vuelve a “Todo” para ver la carta completa.</p>
+          </div>
+
+          <div class="carta-note reveal">
+            <p>
+              <strong>¿Antojo en casa?</strong> Los domicilios se coordinan
+              directamente por WhatsApp. La carta no procesa pagos ni pedidos en
+              línea.
+            </p>
+            <a
+              class="btn btn--sm btn--ghost"
+              href="#"
+              data-wa
+              data-wa-message="Hola Konys, quiero hacer un pedido a domicilio."
+              >Pedir por WhatsApp <svg><use href="#i-wa"></use></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ RESERVAR ============================ -->
+      <section
+        class="section booking-band"
+        id="reservar"
+        aria-labelledby="reservar-title"
+      >
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="bracket section__eyebrow">
+              <svg><use href="#i-chev-right"></use></svg> Sin llamadas
+              <svg><use href="#i-chev-left"></use></svg>
+            </p>
+            <h2 class="display section__title" id="reservar-title">
+              Reserva tu mesa
+            </h2>
+            <p class="section__intro">
+              Elige mesa, día y hora. Nosotros ponemos el horno. La reserva
+              tarda menos que decidir qué pizza pedir.
+            </p>
+          </div>
+
+          <div class="booking">
+            <div class="booking__main">
+              <!-- Paso 1 -->
+              <section
+                class="step reveal"
+                id="step-mesa"
+                aria-labelledby="step-mesa-title"
+              >
+                <div class="step__head">
+                  <span class="step__num">01</span>
+                  <h3 class="step__title" id="step-mesa-title">
+                    Elige tu mesa
+                  </h3>
+                  <span class="step__meta"
+                    >Salón o terraza · hasta 8 personas</span
+                  >
+                </div>
+                <p class="step__hint" id="step-mesa-hint">
+                  Selecciona una mesa para ver los horarios disponibles.
+                </p>
+                <div
+                  class="table-picker"
+                  id="table-picker"
+                  role="group"
+                  aria-label="Seleccionar mesa"
+                ></div>
+              </section>
+
+              <!-- Paso 2 -->
+              <section
+                class="step reveal"
+                id="step-fecha"
+                aria-labelledby="step-fecha-title"
+              >
+                <div class="step__head">
+                  <span class="step__num">02</span>
+                  <h3 class="step__title" id="step-fecha-title">
+                    Fecha y hora
+                  </h3>
+                  <span class="step__meta">Reservas de 60 minutos</span>
+                </div>
+                <div class="booking-cal">
+                  <div class="cal__head">
+                    <span class="cal__month" id="cal-month">—</span>
+                    <div class="cal__nav">
+                      <button
+                        type="button"
+                        id="cal-prev"
+                        aria-label="Mes anterior"
+                      >
+                        <svg><use href="#i-chev-left"></use></svg>
+                      </button>
+                      <button
+                        type="button"
+                        id="cal-next"
+                        aria-label="Mes siguiente"
+                      >
+                        <svg><use href="#i-chev-right"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="cal__weekdays" aria-hidden="true">
+                    <span>L</span><span>M</span><span>X</span><span>J</span
+                    ><span>V</span><span>S</span><span>D</span>
+                  </div>
+                  <div
+                    class="cal__grid"
+                    id="booking-calendar"
+                    role="grid"
+                    aria-label="Calendario de reservas"
+                  ></div>
+                  <div class="cal__legend">
+                    <span><i class="open"></i> Con servicio</span>
+                    <span><i class="closed"></i> Cerrado</span>
+                    <span><i class="chosen"></i> Elegido</span>
+                  </div>
+                </div>
+
+                <div class="slots-wrap">
+                  <div class="slots-group__title">
+                    <span>Horarios disponibles</span>
+                    <strong id="slots-day-label">Selecciona una fecha</strong>
+                  </div>
+                  <div id="slots-container" aria-live="polite">
+                    <div class="slots-empty">
+                      Primero elige una mesa y una fecha para ver los horarios
+                      libres.
+                    </div>
+                  </div>
+                  <div class="legend" style="margin-top: 14px">
+                    <span><i class="free"></i> Libre</span>
+                    <span><i class="busy"></i> Ocupado</span>
+                    <span><i class="chosen"></i> Seleccionado</span>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Paso 3 -->
+              <section
+                class="step reveal"
+                id="step-datos"
+                aria-labelledby="step-datos-title"
+              >
+                <div class="step__head">
+                  <span class="step__num">03</span>
+                  <h3 class="step__title" id="step-datos-title">Tus datos</h3>
+                  <span class="step__meta">Sin registro · sin pagos</span>
+                </div>
+                <form id="reserva-form" novalidate autocomplete="on">
+                  <div class="form-grid">
+                    <div class="field field--full" id="field-nombre">
+                      <label for="nombre"
+                        >Nombre completo <span class="req">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej. Camila Rojas"
+                        maxlength="80"
+                        autocomplete="name"
+                        required
+                      />
+                      <span
+                        class="field__error"
+                        id="error-nombre"
+                        hidden
+                      ></span>
+                    </div>
+                    <div class="field" id="field-contacto">
+                      <label for="contacto"
+                        >Teléfono / WhatsApp
+                        <span
+                          style="
+                            color: var(--ink-soft);
+                            letter-spacing: 0;
+                            text-transform: none;
+                            font-weight: 400;
+                          "
+                          >(opcional)</span
+                        ></label
+                      >
+                      <input
+                        type="tel"
+                        id="contacto"
+                        name="contacto"
+                        placeholder="300 123 4567"
+                        maxlength="24"
+                        autocomplete="tel"
+                      />
+                    </div>
+                    <div class="field" id="field-personas">
+                      <label for="personas"
+                        >Número de personas <span class="req">*</span></label
+                      >
+                      <div class="stepper">
+                        <button
+                          type="button"
+                          id="personas-minus"
+                          aria-label="Quitar una persona"
+                        >
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          id="personas"
+                          name="personas"
+                          min="1"
+                          max="8"
+                          step="1"
+                          value="2"
+                          inputmode="numeric"
+                          required
+                        />
+                        <button
+                          type="button"
+                          id="personas-plus"
+                          aria-label="Agregar una persona"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <span class="field__hint" id="capacidad-hint"
+                        >Elige una mesa para validar la capacidad.</span
+                      >
+                      <span
+                        class="field__error"
+                        id="error-personas"
+                        hidden
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="error-box" id="form-error" hidden>
+                    <svg><use href="#i-alert"></use></svg>
+                    <div>
+                      <strong>Revisa la reserva</strong
+                      ><span id="form-error-text"
+                        >Completa los datos para continuar.</span
+                      >
+                    </div>
+                  </div>
+                  <p class="field__hint" style="margin-top: 14px">
+                    Al confirmar aceptas que Konys Pizza guarde estos datos
+                    únicamente para gestionar tu reserva. No enviamos publicidad
+                    ni compartimos tu información.
+                  </p>
+                </form>
+              </section>
+            </div>
+
+            <!-- Resumen -->
+            <aside class="summary reveal" aria-labelledby="summary-title">
+              <div class="summary__head">
+                <h3 id="summary-title">Tu reserva</h3>
+                <span>Konys · BGA</span>
+              </div>
+              <div class="summary__ticket">
+                <div class="summary__mesa">
+                  <div>
+                    <strong id="sum-mesa">—</strong>
+                    <span id="sum-zona">Selecciona una mesa</span>
+                  </div>
+                  <span class="badge badge--red" id="sum-state">Pendiente</span>
+                </div>
+                <dl class="summary__rows">
+                  <div class="summary__row">
+                    <dt>Fecha</dt>
+                    <dd id="sum-fecha" class="is-empty">—</dd>
+                  </div>
+                  <div class="summary__row">
+                    <dt>Hora</dt>
+                    <dd id="sum-hora" class="is-empty">—</dd>
+                  </div>
+                  <div class="summary__row">
+                    <dt>Personas</dt>
+                    <dd id="sum-personas" class="is-empty">—</dd>
+                  </div>
+                  <div class="summary__row">
+                    <dt>Cliente</dt>
+                    <dd id="sum-cliente" class="is-empty">—</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="summary__alert" id="summary-alert" role="alert"></div>
+              <div class="summary__note">
+                <svg><use href="#i-info"></use></svg>
+                <span
+                  >La mesa queda reservada por 60 minutos. Si llegas tarde, la
+                  conservamos durante los primeros 15 minutos.</span
+                >
+              </div>
+              <div class="summary__cta">
+                <div class="summary__total">
+                  <span>Costo de reserva</span><strong>$0</strong>
+                </div>
+                <button
+                  class="btn btn--primary btn--block btn--lg"
+                  id="confirmar-btn"
+                  type="button"
+                  disabled
+                >
+                  <span id="confirmar-label">Confirmar reserva</span>
+                  <svg><use href="#i-arrow"></use></svg>
+                </button>
+              </div>
+              <div class="summary__deadline">
+                <svg><use href="#i-check"></use></svg> Confirmación inmediata ·
+                sujeta a disponibilidad
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ CONTACTO ============================ -->
+      <section
+        class="section section--deep"
+        id="contacto"
+        aria-labelledby="contacto-title"
+      >
+        <div class="container contact">
+          <div class="reveal">
+            <p class="bracket section__eyebrow">
+              <svg><use href="#i-chev-right"></use></svg> Nos vemos acá
+              <svg><use href="#i-chev-left"></use></svg>
+            </p>
+            <h2 class="display contact__title" id="contacto-title">
+              Ven a comer
+            </h2>
+            <p class="contact__copy">
+              Estamos a pocos pasos de la Cra. 36 con calle 41. Llega con
+              hambre, trae a los tuyos y déjale el resto al horno.
+            </p>
+
+            <div class="contact__list">
+              <div class="contact__item">
+                <span class="contact__icon"
+                  ><svg><use href="#i-pin"></use></svg
+                ></span>
+                <div>
+                  <strong>Dirección</strong>
+                  <p>
+                    Cra. 36 con calle 41<br />Bucaramanga, Santander, Colombia
+                  </p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <span class="contact__icon"
+                  ><svg><use href="#i-clock"></use></svg
+                ></span>
+                <div>
+                  <strong>Horario</strong>
+                  <p>
+                    Almuerzo: 12:30 p. m. – 2:30 p. m.<br />Noche: 5:00 p. m. –
+                    11:00 p. m.
+                  </p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <span class="contact__icon"
+                  ><svg><use href="#i-phone"></use></svg
+                ></span>
+                <div>
+                  <strong>Teléfono / WhatsApp</strong>
+                  <p>
+                    <a
+                      href="#"
+                      data-wa
+                      data-wa-message="Hola Konys, quiero información para reservar una mesa."
+                      >+57 300 000 0000</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <span class="contact__icon"
+                  ><svg><use href="#i-instagram"></use></svg
+                ></span>
+                <div>
+                  <strong>Redes sociales</strong>
+                  <p>
+                    <a
+                      href="https://instagram.com/konyspizza"
+                      target="_blank"
+                      rel="noopener"
+                      >@konyspizza</a
+                    >
+                    · Instagram · Facebook · TikTok
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__actions">
+              <a
+                class="btn btn--primary"
+                href="#"
+                data-wa
+                data-wa-message="Hola Konys, quiero reservar una mesa."
+                >Escribir por WhatsApp <svg><use href="#i-wa"></use></svg
+              ></a>
+              <a class="btn btn--ghost" href="#reservar"
+                >Reservar en línea <svg><use href="#i-arrow"></use></svg
+              ></a>
+            </div>
+            <div class="contact__socials">
+              <a
+                href="https://instagram.com/konyspizza"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram de Konys Pizza"
+                ><svg><use href="#i-instagram"></use></svg
+              ></a>
+              <a
+                href="https://facebook.com/konyspizza"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook de Konys Pizza"
+                ><svg><use href="#i-facebook"></use></svg
+              ></a>
+              <a
+                href="https://tiktok.com/@konyspizza"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok de Konys Pizza"
+                ><svg><use href="#i-tiktok"></use></svg
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="map-card reveal"
+            aria-label="Ubicación de Konys Pizza en Bucaramanga"
+          >
+            <div class="map-card__canvas" aria-hidden="true">
+              <span class="map-card__street map-card__street--a">Calle 41</span>
+              <span class="map-card__street map-card__street--b"
+                >Carrera 36</span
+              >
+            </div>
+            <span class="map-card__tag">Salón &amp; terraza</span>
+            <div class="map-card__pin" aria-hidden="true">
+              <svg><use href="#i-pizza"></use></svg>
+            </div>
+            <div class="map-card__content">
+              <div>
+                <strong>KONYS PIZZA</strong>
+                <span>Cra. 36 con calle 41 · Bucaramanga</span>
+              </div>
+              <a
+                class="btn btn--sm btn--blush"
+                href="https://maps.google.com/?q=Cra.+36+con+calle+41,+Bucaramanga,+Santander"
+                target="_blank"
+                rel="noopener"
+                >Abrir mapa <svg><use href="#i-arrow-up"></use></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__brand">
+          <div class="footer__wordmark">KONYS</div>
+          <p class="footer__tagline">
+            La pizza más icónica de la ciudad. Hecha en Bucaramanga, pensada
+            para compartir.
+          </p>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__col">
+            <h4>Konys Pizza</h4>
+            <p>Cra. 36 con calle 41<br />Bucaramanga, Santander, Colombia</p>
+            <p style="margin-top: 8px">
+              <a href="#" data-wa>+57 300 000 0000</a>
+            </p>
+            <div class="footer__social">
+              <a
+                href="https://instagram.com/konyspizza"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><svg><use href="#i-instagram"></use></svg
+              ></a>
+              <a
+                href="https://facebook.com/konyspizza"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                ><svg><use href="#i-facebook"></use></svg
+              ></a>
+              <a
+                href="https://tiktok.com/@konyspizza"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                ><svg><use href="#i-tiktok"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Explorar</h4>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#mesas">Mesas</a></li>
+              <li><a href="#carta">Carta</a></li>
+              <li><a href="#reservar">Reservar</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Horarios</h4>
+            <p>Almuerzo<br />12:30 p. m. – 2:30 p. m.</p>
+            <p style="margin-top: 8px">Noche<br />5:00 p. m. – 11:00 p. m.</p>
+          </div>
+          <div class="footer__col">
+            <h4>Información</h4>
+            <p>
+              Reservas sin costo.<br />Domicilios por WhatsApp.<br />Carta
+              informativa, sin pagos en línea.
+            </p>
+            <div style="margin-top: 14px">
+              <span class="datasource-chip" id="data-source-chip"
+                ><i></i> Conectando…</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            © <span id="year">2026</span> Konys Pizza. Todos los derechos
+            reservados.
+          </p>
+          <nav aria-label="Enlaces legales y administración">
+            <a href="#reservar">Reservar</a>
+            <a href="#" data-wa>WhatsApp</a>
+            <a href="admin.html"
+              ><svg
+                width="11"
+                height="11"
+                style="display: inline; vertical-align: -1px"
+              >
+                <use href="#i-key"></use>
+              </svg>
+              Administración</a
+            >
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="wa-float"
+      href="#"
+      data-wa
+      data-wa-message="Hola Konys, quiero reservar una mesa."
+      aria-label="Escribir a Konys Pizza por WhatsApp"
+    >
+      <svg><use href="#i-wa"></use></svg><span>WhatsApp</span>
+    </a>
+
+    <!-- Confirmación de reserva -->
+    <dialog
+      class="success-dialog"
+      id="success-dialog"
+      aria-labelledby="success-title"
+    >
+      <div class="success__top">
+        <div class="success__check">
+          <svg style="color: #fff"><use href="#i-check"></use></svg>
+        </div>
+        <h2 class="success__title" id="success-title">¡Reserva confirmada!</h2>
+        <p class="success__sub">Te esperamos en Konys Pizza</p>
+      </div>
+      <div class="success__body">
+        <div class="success__code">
+          <span>Código de reserva</span
+          ><strong id="success-code">KP-000000</strong>
+        </div>
+        <dl class="success__rows">
+          <div class="summary__row">
+            <dt>Cliente</dt>
+            <dd id="success-cliente">—</dd>
+          </div>
+          <div class="summary__row">
+            <dt>Mesa</dt>
+            <dd id="success-mesa">—</dd>
+          </div>
+          <div class="summary__row">
+            <dt>Zona</dt>
+            <dd id="success-zona">—</dd>
+          </div>
+          <div class="summary__row">
+            <dt>Fecha</dt>
+            <dd id="success-fecha">—</dd>
+          </div>
+          <div class="summary__row">
+            <dt>Hora</dt>
+            <dd id="success-hora">—</dd>
+          </div>
+          <div class="summary__row">
+            <dt>Personas</dt>
+            <dd id="success-personas">—</dd>
+          </div>
+          <div class="summary__row">
+            <dt>Estado</dt>
+            <dd>
+              <span class="badge badge--free success__state"
+                ><i class="badge__dot"></i> Confirmada</span
+              >
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="success__actions">
+        <button
+          class="btn btn--primary btn--block"
+          type="button"
+          id="success-home"
+        >
+          Volver al inicio <svg><use href="#i-arrow"></use></svg>
+        </button>
+        <button
+          class="btn btn--ghost btn--block"
+          type="button"
+          id="success-again"
+        >
+          Hacer otra reserva
+        </button>
+      </div>
+      <p class="success__foot">
+        Guarda tu código. Si necesitas cambiar algo, escríbenos por WhatsApp.
+      </p>
+    </dialog>
+
+    <script src="js/env.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/vendor/supabase.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/cliente.js"></script>
+  </body>
+</html>

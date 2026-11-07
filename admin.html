@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Administración — Konys Pizza</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/anton-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/inter-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <svg
+      width="0"
+      height="0"
+      aria-hidden="true"
+      focusable="false"
+      style="position: absolute"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path
+          d="M5 12h14M13 6l6 6-6 6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path
+          d="M7 17 17 7M8 7h9v9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path
+          d="m4.5 12.5 5 5 10-11"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path
+          d="m6 6 12 12M18 6 6 18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24">
+        <path
+          d="M12 3.5 21 20H3L12 3.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12 9v5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <circle cx="12" cy="17.1" r="1" fill="currentColor" />
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24">
+        <circle
+          cx="12"
+          cy="12"
+          r="8.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M12 10.5V17"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <circle cx="12" cy="7.6" r="1" fill="currentColor" />
+      </symbol>
+      <symbol id="i-table" viewBox="0 0 24 24">
+        <path
+          d="M3.5 9h17M5 9v10M19 9v10M3.5 6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5V9h-17V6.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8 13h2M14 13h2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle
+          cx="12"
+          cy="12"
+          r="8.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M12 7.5V12l3 2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <rect
+          x="3.5"
+          y="5"
+          width="17"
+          height="15.5"
+          rx="2.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M7.5 3v4M16.5 3v4M3.5 9.5h17"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path
+          d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16.5H6.5A2.5 2.5 0 0 0 4 22V5.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 11h5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-logout" viewBox="0 0 24 24">
+        <path
+          d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14M9 8l-4 4 4 4M5 12h10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path
+          d="M12 5v14M5 12h14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24">
+        <path
+          d="M4 20h4L20 8l-4-4L4 16v4Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="m14 6 4 4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24">
+        <path
+          d="M4 7h16M9 7V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V7M6 7l1 13.5h10L18 7M10 11v6M14 11v6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle
+          cx="10.5"
+          cy="10.5"
+          r="6.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="m15.5 15.5 5 5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path
+          d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-chev-left" viewBox="0 0 24 24">
+        <path
+          d="m14.5 5-7 7 7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-chev-right" viewBox="0 0 24 24">
+        <path
+          d="m9.5 5 7 7-7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle
+          cx="9"
+          cy="8"
+          r="3.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M3.5 19.5c0-3 2.5-5.2 5.5-5.2s5.5 2.2 5.5 5.2M16 5.4a3.2 3.2 0 0 1 0 6.2M17 14.6c2.2.4 3.8 2.3 3.8 4.9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-key" viewBox="0 0 24 24">
+        <circle
+          cx="8"
+          cy="12"
+          r="3.7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M11.7 12H21M17 12v3M14 12v2.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path
+          d="M2.8 12S6.4 5.8 12 5.8 21.2 12 21.2 12 17.6 18.2 12 18.2 2.8 12 2.8 12Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="2.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="i-eye-off" viewBox="0 0 24 24">
+        <path
+          d="M4 4l16 16M9.9 5.2A9.4 9.4 0 0 1 12 5c5.6 0 9.2 7 9.2 7a14 14 0 0 1-2.2 3.1M6.2 7.1C4.1 9 2.8 12 2.8 12S6.4 18.2 12 18.2c1 0 2-.2 2.9-.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path
+          d="M4 7h16M4 12h16M4 17h16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-link" viewBox="0 0 24 24">
+        <path
+          d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M7.2 3.5 9 7.4l-2.1 1.5a12 12 0 0 0 6.2 6.2l1.5-2.1 3.9 1.8-.7 3.5c-.2.9-1 1.4-1.9 1.3C9.2 18.8 5.2 14.8 4.4 7.1c-.1-.9.4-1.7 1.3-1.9l1.5-.7Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24">
+        <path
+          d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.6a8.4 8.4 0 1 1 15.6-4.3Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8.3 7.4c.2-.4.5-.5.8-.5h.6c.2 0 .4.1.5.5l.8 1.9c.1.2 0 .5-.2.7l-.7.7c-.2.2-.2.4-.1.6.5.9 1.3 1.7 2.2 2.2.2.1.4.1.6-.1l.7-.7c.2-.2.4-.3.7-.2l1.9.8c.3.1.5.3.5.6v.7c0 .8-.7 1.5-1.5 1.6-3.6.4-7.6-3.6-7.9-7.2 0-.4.1-.8.3-1.1Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 24 24">
+        <rect
+          x="3.5"
+          y="4.5"
+          width="17"
+          height="15"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="9"
+          cy="9.5"
+          r="1.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <path
+          d="m5 17 5-5 3 3 2-2 4 4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2-5.6-3-5.6 3 1.2-6.2L3 9.5l6.3-.8L12 3Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path
+          d="M12 2.8c.6 5.2 4 8.6 9.2 9.2-5.2.6-8.6 4-9.2 9.2-.6-5.2-4-8.6-9.2-9.2 5.2-.6 8.6-4 9.2-9.2Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ============================ LOGIN ============================ -->
+    <div class="login" id="login-view">
+      <div class="login__brand">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Volver al sitio de Konys Pizza"
+        >
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <path
+                d="M20 3 35 33c-10 4.4-20 4.4-30 0L20 3Z"
+                fill="currentColor"
+              />
+              <circle cx="20" cy="19" r="2.3" fill="#260212" />
+              <circle cx="14.5" cy="26" r="2" fill="#260212" />
+              <circle cx="25.5" cy="26" r="2" fill="#260212" />
+              <path
+                d="M5 33c10 4.4 20 4.4 30 0"
+                fill="none"
+                stroke="#ffc7c6"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="brand__text"
+            >KONYS<span class="brand__sub">PIZZERÍA · BGA</span></span
+          >
+        </a>
+        <div class="login__display">
+          <p class="eyebrow eyebrow--red">
+            <i class="dot"></i> Zona restringida
+          </p>
+          <h1 class="display login__word">ADMIN</h1>
+          <p class="login__tagline">
+            El cuarto de máquinas de la pizza más icónica de la ciudad.
+          </p>
+        </div>
+        <div class="login__stats">
+          <span><strong>Mesas</strong>Salón &amp; terraza</span>
+          <span><strong>Reservas</strong>Control en vivo</span>
+          <span><strong>Carta</strong>Disponibilidad</span>
+        </div>
+        <div class="login__photo" aria-hidden="true">
+          <img
+            src="assets/img/mesa-noche.webp"
+            alt=""
+            width="900"
+            height="675"
+          />
+        </div>
+      </div>
+
+      <div class="login__panel">
+        <form class="login__form" id="login-form" novalidate>
+          <div class="login__form-head">
+            <span class="login__lock" aria-hidden="true"
+              ><svg><use href="#i-key"></use></svg
+            ></span>
+            <p class="eyebrow" style="margin-bottom: 14px">Acceso privado</p>
+            <h2 class="display login__title">Panel de<br />administración</h2>
+            <p class="login__copy">
+              Ingresa la contraseña del equipo Konys. Solo el personal
+              autorizado puede modificar mesas, horarios, reservas y carta.
+            </p>
+          </div>
+
+          <div class="demo-hint" id="login-demo-hint" hidden>
+            <strong>Modo demostración</strong>
+            <span
+              >La clave de este entorno es <code>konys2026</code>. En producción
+              se valida contra un hash en Supabase.</span
+            >
+          </div>
+
+          <div class="error-box" id="login-error" hidden>
+            <svg><use href="#i-alert"></use></svg>
+            <div>
+              <strong>No se pudo ingresar</strong
+              ><span id="login-error-text">Verifica la contraseña.</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Contraseña</label>
+            <div class="password-wrap">
+              <input
+                type="password"
+                id="login-password"
+                name="password"
+                placeholder="••••••••••"
+                autocomplete="current-password"
+                required
+              />
+              <button
+                class="password-toggle"
+                type="button"
+                id="toggle-password"
+                aria-label="Mostrar contraseña"
+                aria-pressed="false"
+              >
+                <svg><use href="#i-eye"></use></svg>
+              </button>
+            </div>
+          </div>
+
+          <button
+            class="btn btn--primary btn--lg btn--block"
+            type="submit"
+            id="login-submit"
+          >
+            Ingresar al panel
+            <svg class="btn__arrow"><use href="#i-arrow"></use></svg>
+          </button>
+
+          <div class="login__meta">
+            <a href="index.html">← Volver al sitio</a>
+            <span class="datasource-chip" id="admin-login-chip"
+              ><i></i> Comprobando conexión…</span
+            >
+          </div>
+          <p class="login__legal">
+            Acceso monitoreado. La sesión expira automáticamente después de 8
+            horas.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ============================ APP ============================ -->
+    <div class="admin-shell" id="app-view" hidden>
+      <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+        aria-label="Navegación del panel"
+      >
+        <div class="admin-sidebar__head">
+          <a class="brand" href="index.html" aria-label="Konys Pizza">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path
+                  d="M20 3 35 33c-10 4.4-20 4.4-30 0L20 3Z"
+                  fill="currentColor"
+                />
+                <circle cx="20" cy="19" r="2.3" fill="#260212" />
+                <circle cx="14.5" cy="26" r="2" fill="#260212" />
+                <circle cx="25.5" cy="26" r="2" fill="#260212" />
+                <path
+                  d="M5 33c10 4.4 20 4.4 30 0"
+                  fill="none"
+                  stroke="#ffc7c6"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span class="brand__text"
+              >KONYS<span class="brand__sub">PIZZERÍA · BGA</span></span
+            >
+          </a>
+          <span class="admin-sidebar__badge">Admin</span>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav__label">Operación</span>
+          <a class="admin-nav__item" href="#mesas" data-section-link="mesas"
+            ><svg><use href="#i-table"></use></svg> Mesas
+            <span class="admin-nav__count" data-count="mesas">0</span></a
+          >
+          <a
+            class="admin-nav__item"
+            href="#horarios"
+            data-section-link="horarios"
+            ><svg><use href="#i-clock"></use></svg> Horarios</a
+          >
+          <a
+            class="admin-nav__item"
+            href="#reservas"
+            data-section-link="reservas"
+            ><svg><use href="#i-calendar"></use></svg> Reservas
+            <span class="admin-nav__count" data-count="reservas">0</span></a
+          >
+          <a class="admin-nav__item" href="#carta" data-section-link="carta"
+            ><svg><use href="#i-book"></use></svg> Carta
+            <span class="admin-nav__count" data-count="platos">0</span></a
+          >
+        </nav>
+
+        <div class="admin-sidebar__foot">
+          <div class="admin-user">
+            <span class="admin-user__avatar">KP</span>
+            <div><strong>Equipo Konys</strong><span>Administrador</span></div>
+          </div>
+          <span
+            class="datasource-chip"
+            id="admin-demo-chip"
+            style="margin: 0 0 12px"
+            ><i></i> Modo demo</span
+          >
+          <button class="admin-logout" type="button" id="logout-btn">
+            <svg><use href="#i-logout"></use></svg> Cerrar sesión
+          </button>
+        </div>
+      </aside>
+
+      <div class="admin-backdrop" id="admin-backdrop" aria-hidden="true"></div>
+
+      <div class="admin-main">
+        <header class="admin-topbar">
+          <div class="admin-topbar__left">
+            <button
+              class="icon-btn admin-menu-btn"
+              type="button"
+              id="sidebar-toggle"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="admin-sidebar"
+            >
+              <svg><use href="#i-menu"></use></svg>
+            </button>
+            <div>
+              <h1 class="admin-topbar__title" id="topbar-title">Mesas</h1>
+              <p class="admin-topbar__sub" id="topbar-sub">
+                Gestiona la disponibilidad del salón y la terraza.
+              </p>
+            </div>
+          </div>
+          <div class="admin-topbar__right">
+            <span class="admin-topbar__date" id="topbar-date"></span>
+            <button
+              class="icon-btn"
+              type="button"
+              id="refresh-section"
+              aria-label="Actualizar datos"
+              title="Actualizar datos"
+            >
+              <svg><use href="#i-refresh"></use></svg>
+            </button>
+            <a
+              class="btn btn--ghost btn--sm"
+              href="index.html"
+              target="_blank"
+              rel="noopener"
+              >Ver sitio <svg><use href="#i-arrow-up"></use></svg
+            ></a>
+          </div>
+        </header>
+
+        <main class="admin-content">
+          <div class="admin-metrics" id="admin-metrics">
+            <article class="metric">
+              <div class="metric__top">
+                <span>Mesas activas</span
+                ><span class="metric__icon"
+                  ><svg><use href="#i-table"></use></svg
+                ></span>
+              </div>
+              <strong id="metric-mesas">—</strong>
+              <p id="metric-mesas-sub">Cargando…</p>
+            </article>
+            <article class="metric">
+              <div class="metric__top">
+                <span>Reservas hoy</span
+                ><span class="metric__icon"
+                  ><svg><use href="#i-calendar"></use></svg
+                ></span>
+              </div>
+              <strong id="metric-hoy">—</strong>
+              <p id="metric-hoy-sub">Cargando…</p>
+            </article>
+            <article class="metric">
+              <div class="metric__top">
+                <span>Próximas</span
+                ><span class="metric__icon"
+                  ><svg><use href="#i-clock"></use></svg
+                ></span>
+              </div>
+              <strong id="metric-proximas">—</strong>
+              <p id="metric-proximas-sub">Cargando…</p>
+            </article>
+            <article class="metric">
+              <div class="metric__top">
+                <span>Platos visibles</span
+                ><span class="metric__icon"
+                  ><svg><use href="#i-book"></use></svg
+                ></span>
+              </div>
+              <strong id="metric-platos">—</strong>
+              <p id="metric-platos-sub">Cargando…</p>
+            </article>
+          </div>
+
+          <!-- MESAS -->
+          <section
+            class="admin-section"
+            id="section-mesas"
+            aria-labelledby="mesas-heading"
+          >
+            <div class="panel">
+              <div class="panel__head">
+                <div>
+                  <h2 class="panel__title" id="mesas-heading">
+                    Mesas del restaurante
+                  </h2>
+                  <p class="panel__sub">
+                    Activa, desactiva o edita cada mesa. Las mesas inactivas
+                    desaparecen del módulo del cliente.
+                  </p>
+                </div>
+                <button
+                  class="btn btn--primary btn--sm"
+                  type="button"
+                  id="nueva-mesa-btn"
+                >
+                  <svg><use href="#i-plus"></use></svg> Nueva mesa
+                </button>
+              </div>
+              <div class="table-tools">
+                <div class="search-box">
+                  <svg><use href="#i-search"></use></svg>
+                  <input
+                    type="search"
+                    id="mesas-search"
+                    placeholder="Buscar por nombre o zona…"
+                    aria-label="Buscar mesas"
+                  />
+                </div>
+                <span class="table-count" id="mesas-count">—</span>
+              </div>
+              <div class="table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Mesa</th>
+                      <th>Zona</th>
+                      <th>Capacidad</th>
+                      <th>Estado</th>
+                      <th class="th-actions">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mesas-tbody">
+                    <tr class="tr-loading">
+                      <td colspan="5">
+                        <span class="spinner"></span> Cargando mesas…
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- HORARIOS -->
+          <section
+            class="admin-section"
+            id="section-horarios"
+            aria-labelledby="horarios-heading"
+            hidden
+          >
+            <div class="panel">
+              <div class="panel__head">
+                <div>
+                  <h2 class="panel__title" id="horarios-heading">
+                    Horarios de atención
+                  </h2>
+                  <p class="panel__sub">
+                    Define las dos jornadas por día. Estos bloques alimentan
+                    automáticamente el calendario del cliente.
+                  </p>
+                </div>
+                <div class="panel__actions">
+                  <button
+                    class="btn btn--ghost btn--sm"
+                    type="button"
+                    id="copiar-horario-btn"
+                  >
+                    Copiar lunes a todos
+                  </button>
+                  <button
+                    class="btn btn--primary btn--sm"
+                    type="button"
+                    id="guardar-horarios-btn"
+                  >
+                    <svg><use href="#i-check"></use></svg> Guardar cambios
+                  </button>
+                </div>
+              </div>
+
+              <div class="duration-bar">
+                <div>
+                  <label for="duracion-global">Duración de cada reserva</label>
+                  <p>Se aplica a todos los bloques al guardar.</p>
+                </div>
+                <select id="duracion-global" class="mini-select">
+                  <option value="30">30 minutos</option>
+                  <option value="45">45 minutos</option>
+                  <option value="60" selected>60 minutos</option>
+                  <option value="90">90 minutos</option>
+                  <option value="120">120 minutos</option>
+                </select>
+              </div>
+
+              <div class="table-wrap">
+                <table class="admin-table admin-table--schedule">
+                  <thead>
+                    <tr>
+                      <th>Día</th>
+                      <th>Almuerzo · inicio</th>
+                      <th>Almuerzo · fin</th>
+                      <th>Noche · inicio</th>
+                      <th>Noche · fin</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody id="horarios-tbody">
+                    <tr class="tr-loading">
+                      <td colspan="6">
+                        <span class="spinner"></span> Cargando horarios…
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-hint">
+                <svg><use href="#i-info"></use></svg> Desactiva una jornada para
+                cerrarla. Si ambas jornadas de un día están inactivas, ese día
+                no se podrá reservar.
+              </p>
+            </div>
+          </section>
+
+          <!-- RESERVAS -->
+          <section
+            class="admin-section"
+            id="section-reservas"
+            aria-labelledby="reservas-heading"
+            hidden
+          >
+            <div class="panel">
+              <div class="panel__head">
+                <div>
+                  <h2 class="panel__title" id="reservas-heading">Reservas</h2>
+                  <p class="panel__sub">
+                    Consulta, filtra y actualiza el estado de cada reserva. Los
+                    cambios se reflejan al instante en Supabase.
+                  </p>
+                </div>
+                <button
+                  class="btn btn--ghost btn--sm"
+                  type="button"
+                  id="actualizar-reservas-btn"
+                >
+                  <svg><use href="#i-refresh"></use></svg> Actualizar
+                </button>
+              </div>
+
+              <div class="filter-bar">
+                <div class="filter-field">
+                  <label for="filtro-fecha">Fecha</label>
+                  <input type="date" id="filtro-fecha" />
+                </div>
+                <div class="filter-field">
+                  <label for="filtro-mesa">Mesa</label>
+                  <select id="filtro-mesa">
+                    <option value="">Todas</option>
+                  </select>
+                </div>
+                <div class="filter-field">
+                  <label for="filtro-estado">Estado</label>
+                  <select id="filtro-estado">
+                    <option value="">Todos</option>
+                    <option value="confirmada">Confirmadas</option>
+                    <option value="cancelada">Canceladas</option>
+                    <option value="completada">Completadas</option>
+                  </select>
+                </div>
+                <button
+                  class="btn btn--ghost btn--sm filter-clear"
+                  type="button"
+                  id="limpiar-filtros-btn"
+                >
+                  Limpiar
+                </button>
+              </div>
+
+              <div class="table-tools">
+                <div class="legend">
+                  <span
+                    ><i class="free" style="background: var(--free)"></i>
+                    Confirmada</span
+                  >
+                  <span><i style="background: var(--red)"></i> Cancelada</span>
+                  <span
+                    ><i style="background: var(--busy)"></i> Completada</span
+                  >
+                </div>
+                <span class="table-count" id="reservas-count">—</span>
+              </div>
+
+              <div class="table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Cliente</th>
+                      <th>Mesa</th>
+                      <th>Fecha</th>
+                      <th>Hora</th>
+                      <th>Personas</th>
+                      <th>Estado</th>
+                      <th class="th-actions">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="reservas-tbody">
+                    <tr class="tr-loading">
+                      <td colspan="7">
+                        <span class="spinner"></span> Cargando reservas…
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- CARTA -->
+          <section
+            class="admin-section"
+            id="section-carta"
+            aria-labelledby="carta-heading"
+            hidden
+          >
+            <div class="panel">
+              <div class="panel__head">
+                <div>
+                  <h2 class="panel__title" id="carta-heading">Carta digital</h2>
+                  <p class="panel__sub">
+                    Los productos ocultos o no disponibles no aparecen en la
+                    carta pública.
+                  </p>
+                </div>
+                <button
+                  class="btn btn--primary btn--sm"
+                  type="button"
+                  id="nuevo-plato-btn"
+                >
+                  <svg><use href="#i-plus"></use></svg> Agregar producto
+                </button>
+              </div>
+
+              <div class="table-tools">
+                <div class="carta-toolbar" id="admin-carta-filters"></div>
+                <span class="table-count" id="platos-count">—</span>
+              </div>
+
+              <div class="table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Categoría</th>
+                      <th>Descripción</th>
+                      <th>Precio</th>
+                      <th>Disponibilidad</th>
+                      <th class="th-actions">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="platos-tbody">
+                    <tr class="tr-loading">
+                      <td colspan="6">
+                        <span class="spinner"></span> Cargando carta…
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- ============================ MODALES ============================ -->
+    <dialog id="mesa-dialog" aria-labelledby="mesa-dialog-title">
+      <form id="mesa-form" novalidate>
+        <div class="dialog__head">
+          <div>
+            <h2 class="dialog__title" id="mesa-dialog-title">Nueva mesa</h2>
+            <p class="dialog__sub">Nombre, zona, capacidad y foto opcional.</p>
+          </div>
+          <button
+            class="dialog__close"
+            type="button"
+            data-close-dialog
+            aria-label="Cerrar"
+          >
+            <svg><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <div class="dialog__body">
+          <input type="hidden" id="mesa-id" />
+          <div class="error-box" id="mesa-error" hidden>
+            <svg><use href="#i-alert"></use></svg>
+            <div>
+              <strong>Revisa la mesa</strong><span id="mesa-error-text"></span>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="mesa-nombre"
+                >Nombre o número <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="mesa-nombre"
+                maxlength="40"
+                placeholder="Ej. Mesa 9"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="mesa-zona">Zona <span class="req">*</span></label>
+              <select id="mesa-zona">
+                <option value="salon">Salón</option>
+                <option value="terraza">Terraza</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mesa-capacidad"
+                >Capacidad máxima <span class="req">*</span></label
+              >
+              <input
+                type="number"
+                id="mesa-capacidad"
+                min="1"
+                max="30"
+                step="1"
+                value="4"
+                required
+              />
+            </div>
+            <div class="field field--full">
+              <label for="mesa-foto">Fotografía (URL opcional)</label>
+              <input
+                type="text"
+                id="mesa-foto"
+                placeholder="assets/img/mesa-salon.webp o https://…"
+              />
+              <span class="field__hint"
+                >Puedes usar una ruta local del proyecto o una URL
+                pública.</span
+              >
+            </div>
+            <div class="field field--full">
+              <div class="image-preview" id="mesa-preview">
+                <span
+                  ><svg><use href="#i-image"></use></svg> Sin foto
+                  seleccionada</span
+                >
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="switch-row" for="mesa-activa">
+                <span
+                  ><strong>Mesa activa</strong
+                  ><small>Visible para reservas del cliente</small></span
+                >
+                <span class="switch"
+                  ><input
+                    type="checkbox"
+                    id="mesa-activa"
+                    checked /><span></span
+                ></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="dialog__foot">
+          <button
+            class="btn btn--ghost btn--sm"
+            type="button"
+            data-close-dialog
+          >
+            Cancelar
+          </button>
+          <button
+            class="btn btn--primary btn--sm"
+            type="submit"
+            id="mesa-submit"
+          >
+            Guardar mesa
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="plato-dialog" aria-labelledby="plato-dialog-title">
+      <form id="plato-form" novalidate>
+        <div class="dialog__head">
+          <div>
+            <h2 class="dialog__title" id="plato-dialog-title">
+              Nuevo producto
+            </h2>
+            <p class="dialog__sub">
+              Nombre, categoría, precio y disponibilidad.
+            </p>
+          </div>
+          <button
+            class="dialog__close"
+            type="button"
+            data-close-dialog
+            aria-label="Cerrar"
+          >
+            <svg><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <div class="dialog__body">
+          <input type="hidden" id="plato-id" />
+          <div class="error-box" id="plato-error" hidden>
+            <svg><use href="#i-alert"></use></svg>
+            <div>
+              <strong>Revisa el producto</strong
+              ><span id="plato-error-text"></span>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="plato-nombre"
+                >Nombre <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="plato-nombre"
+                maxlength="60"
+                placeholder="Ej. Pizza Konys"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="plato-categoria"
+                >Categoría <span class="req">*</span></label
+              >
+              <select id="plato-categoria">
+                <option value="pizzas">Pizzas</option>
+                <option value="entradas">Entradas</option>
+                <option value="postres">Postres</option>
+                <option value="bebidas">Bebidas</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="plato-precio"
+                >Precio (COP) <span class="req">*</span></label
+              >
+              <input
+                type="number"
+                id="plato-precio"
+                min="0"
+                step="500"
+                placeholder="38000"
+                required
+              />
+            </div>
+            <div class="field field--full">
+              <label for="plato-descripcion">Descripción</label>
+              <textarea
+                id="plato-descripcion"
+                maxlength="180"
+                placeholder="Ingredientes o nota breve…"
+              ></textarea>
+            </div>
+            <div class="field field--full">
+              <label for="plato-foto">Fotografía (URL opcional)</label>
+              <input
+                type="text"
+                id="plato-foto"
+                placeholder="assets/img/pizza-margarita.webp o https://…"
+              />
+            </div>
+            <div class="field field--full">
+              <div class="image-preview" id="plato-preview">
+                <span
+                  ><svg><use href="#i-image"></use></svg> Sin foto
+                  seleccionada</span
+                >
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="switch-row" for="plato-disponible">
+                <span
+                  ><strong>Disponible</strong
+                  ><small>Visible en la carta pública</small></span
+                >
+                <span class="switch"
+                  ><input
+                    type="checkbox"
+                    id="plato-disponible"
+                    checked /><span></span
+                ></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="dialog__foot">
+          <button
+            class="btn btn--ghost btn--sm"
+            type="button"
+            data-close-dialog
+          >
+            Cancelar
+          </button>
+          <button
+            class="btn btn--primary btn--sm"
+            type="submit"
+            id="plato-submit"
+          >
+            Guardar producto
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="reserva-dialog" aria-labelledby="reserva-dialog-title">
+      <div class="dialog__head">
+        <div>
+          <h2 class="dialog__title" id="reserva-dialog-title">
+            Detalle de reserva
+          </h2>
+          <p class="dialog__sub" id="reserva-dialog-sub">—</p>
+        </div>
+        <button
+          class="dialog__close"
+          type="button"
+          data-close-dialog
+          aria-label="Cerrar"
+        >
+          <svg><use href="#i-x"></use></svg>
+        </button>
+      </div>
+      <div class="dialog__body" id="reserva-detail"></div>
+      <div class="dialog__foot" id="reserva-dialog-foot"></div>
+    </dialog>
+
+    <script src="js/env.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/vendor/supabase.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

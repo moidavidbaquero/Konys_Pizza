@@ -1,0 +1,23 @@
+{
+  "name": "konys-pizza",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web y panel administrativo de Konys Pizza (Bucaramanga) con HTML, CSS, JavaScript y Supabase.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check js/config.js && node --check js/env.js && node --check js/ui.js && node --check js/supabase.js && node --check js/cliente.js && node --check js/admin.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "konys-pizza",
+    "supabase",
+    "vanilla-javascript",
+    "restaurant",
+    "reservations"
+  ],
+  "license": "UNLICENSED"
+}

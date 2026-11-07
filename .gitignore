@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Entorno y despliegue
+.env
+.env.local
+.env.*.local
+.vercel/
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs y temporales
+*.log
+npm-debug.log*
+coverage/
+dist/
+tmp/
