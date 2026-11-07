@@ -105,6 +105,87 @@ konys-reservas-app/
 
 ---
 
+## ☁️ Despliegue en Vercel (producción)
+
+Para que tu sitio se vea en internet con los datos de Supabase (mesas, platos, horarios, reservas), sigue estos pasos:
+
+### 1. Prepara la base de datos en Supabase
+
+Entra a tu proyecto en [Supabase](https://supabase.com/dashboard) y ejecuta en el **SQL Editor**:
+
+1. Ve a **SQL Editor > New query**.
+2. Copia y pega el contenido del archivo `supabase/schema.sql` y dale a **Run**.
+3. Abre una nueva query, pega el contenido de `supabase/seed.sql` y dale a **Run**.
+
+Esto crea las tablas, la seguridad (RLS), las funciones y los datos iniciales (8 mesas, 14 horarios, 12 platos, 6 reservas de ejemplo). La contraseña del panel de administración es `konys2026`.
+
+### 2. Obtén las credenciales de Supabase
+
+En tu dashboard de Supabase, ve a **Settings > API** y copia:
+
+| Variable | Valor |
+|----------|-------|
+| `SUPABASE_URL` | Project URL (`https://tu-proyecto.supabase.co`) |
+| `SUPABASE_ANON_KEY` | Clave pública `anon` (la que empieza con `eyJ...`) |
+
+> ⚠️ Usa únicamente la **anon/public key**. Nunca subas la `service_role key` al frontend.
+
+### 3. Configura las variables de entorno en Vercel
+
+Desde la terminal de VS Code (o tu terminal favorita):
+
+```powershell
+npm install -g vercel
+vercel login
+```
+
+Luego agrega cada variable una por una:
+
+```powershell
+vercel env add SUPABASE_URL
+```
+
+- **Environment Variable type:** elige `Secret` y presiona Enter.
+- **Value:** pega tu `SUPABASE_URL` y presiona Enter.
+- **Environments:** elige `Production` y presiona Enter.
+
+Repite para la segunda variable:
+
+```powershell
+vercel env add SUPABASE_ANON_KEY
+```
+
+- **Environment Variable type:** `Secret`.
+- **Value:** tu `SUPABASE_ANON_KEY`.
+- **Environments:** `Production`.
+
+### 4. Despliega a producción
+
+```powershell
+vercel --prod
+```
+
+Vercel regenerará automáticamente el archivo `js/env.js` con tus credenciales y subirá el sitio a producción.
+
+### 5. Verifica el despliegue
+
+Entra a tu URL de Vercel (por ejemplo: `https://konyspizza-six.vercel.app/`):
+
+- ✅ La sección **Mesas** debe mostrar las mesas disponibles.
+- ✅ La sección **Carta** debe mostrar los platos.
+- ✅ El chip del footer debe decir **"Supabase conectado"**.
+- ✅ En `/admin.html` puedes entrar con la contraseña `konys2026`.
+
+---
+
+### Notas importantes
+
+- El archivo `.env` local solo sirve para probar en tu computadora (`npm run dev`). Para el sitio publicado en internet, lo que importa son las variables configuradas en el dashboard de Vercel.
+- Si ya tenías un despliegue previo sin Supabase, después de agregar las variables debes hacer `vercel --prod` nuevamente para que surtan efecto.
+- Los datos viven en Supabase y se mantienen aunque cierres tu computadora.
+
+---
+
 ## 🧪 Pruebas Automatizadas (Selenium)
 
 El proyecto incluye **34 casos de prueba (CT-00 a CT-33)** que cubren toda la aplicación:
@@ -195,3 +276,4 @@ Instagram: @konyspizza
 ---
 
 *Desarrollado como proyecto académico de Full Stack con Selenium + Python para pruebas automatizadas.*
+
