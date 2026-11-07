@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "build": "",
+    "build": "node scripts/build.mjs",
     "check": "node --check js/config.js && node --check js/env.js && node --check js/ui.js && node --check js/supabase.js && node --check js/cliente.js && node --check js/admin.js"
   },
   "engines": {
