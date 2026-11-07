@@ -1,6 +1,5 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "node scripts/build.mjs",
+  "buildCommand": "echo 'Sitio estático, sin build'",
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
