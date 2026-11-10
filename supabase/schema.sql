@@ -20,6 +20,11 @@
 create extension if not exists pgcrypto;
 create extension if not exists btree_gist;
 
+-- En Supabase las extensiones viven en el esquema "extensions".
+-- Lo agregamos al search_path para que crypt()/gen_salt() funcionen
+-- también fuera de las funciones (por ejemplo en este script).
+set search_path = public, extensions, pg_temp;
+
 -- ------------------------------------------------------------
 -- 1. Tablas
 -- ------------------------------------------------------------
@@ -203,7 +208,7 @@ create or replace function public._konys_client_ip()
 returns text
 language sql
 stable
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
   select coalesce(
     nullif(
@@ -225,7 +230,7 @@ create or replace function public._admin_assert(p_token uuid)
 returns void
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   if p_token is null then
@@ -251,7 +256,7 @@ create or replace function public.admin_login(p_password text)
 returns jsonb
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_ip text := public._konys_client_ip();
@@ -302,7 +307,7 @@ create or replace function public.admin_sesion_valida(p_token uuid)
 returns boolean
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   if p_token is null then
@@ -322,7 +327,7 @@ create or replace function public.admin_logout(p_token uuid)
 returns boolean
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   if p_token is not null then
@@ -340,7 +345,7 @@ create or replace function public.admin_listar_mesas(p_token uuid)
 returns setof public.mesas
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   perform public._admin_assert(p_token);
@@ -361,7 +366,7 @@ create or replace function public.admin_crear_mesa(
 returns public.mesas
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_nombre text := nullif(btrim(coalesce(p_nombre, '')), '');
@@ -412,7 +417,7 @@ create or replace function public.admin_actualizar_mesa(
 returns public.mesas
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_mesa public.mesas%rowtype;
@@ -494,7 +499,7 @@ create or replace function public.admin_eliminar_mesa(p_token uuid, p_id uuid)
 returns boolean
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   perform public._admin_assert(p_token);
@@ -526,7 +531,7 @@ create or replace function public.admin_listar_horarios(p_token uuid)
 returns setof public.horarios
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   perform public._admin_assert(p_token);
@@ -552,7 +557,7 @@ create or replace function public.admin_guardar_horarios(
 returns setof public.horarios
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_item jsonb;
@@ -679,7 +684,7 @@ returns table (
 )
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   perform public._admin_assert(p_token);
@@ -720,7 +725,7 @@ create or replace function public.admin_actualizar_estado_reserva(
 returns jsonb
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_reserva public.reservas%rowtype;
@@ -770,7 +775,7 @@ create or replace function public.admin_listar_platos(p_token uuid)
 returns setof public.platos
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   perform public._admin_assert(p_token);
@@ -798,7 +803,7 @@ create or replace function public.admin_crear_plato(
 returns public.platos
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_nombre text := nullif(btrim(coalesce(p_nombre, '')), '');
@@ -846,7 +851,7 @@ create or replace function public.admin_actualizar_plato(
 returns public.platos
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_plato public.platos%rowtype;
@@ -906,7 +911,7 @@ create or replace function public.admin_eliminar_plato(p_token uuid, p_id uuid)
 returns boolean
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   perform public._admin_assert(p_token);
@@ -934,7 +939,7 @@ returns table (
 )
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 begin
   if p_fecha is null then
@@ -961,7 +966,7 @@ create or replace function public.crear_reserva(
 returns jsonb
 language plpgsql
 security definer
-set search_path = public, pg_temp
+set search_path = public, extensions, pg_temp
 as $$
 declare
   v_mesa public.mesas%rowtype;

@@ -184,6 +184,14 @@ Entra a la URL de producción de tu proyecto. En este caso es `https://konyspizz
 - Si ya tenías un despliegue previo sin Supabase, después de agregar las variables debes hacer `vercel --prod` nuevamente para que surtan efecto.
 - Los datos viven en Supabase y se mantienen aunque cierres tu computadora.
 
+### Si el panel dice "La base de datos no tiene instaladas las funciones de Konys"
+
+Ese mensaje aparece cuando PostgreSQL no encuentra `crypt()` porque `pgcrypto` está instalado en el esquema `extensions`. Ocurre en bases creadas con una versión anterior de `schema.sql`.
+
+**Solución:** en el **SQL Editor** de Supabase, ejecuta una sola vez el archivo `supabase/fix_search_path.sql`. Vuelve a intentar el inicio de sesión del panel con `konys2026`.
+
+Las instalaciones nuevas ya traen el `search_path` correcto y no necesitan este paso.
+
 ---
 
 ## 🧪 Pruebas Automatizadas (Selenium)
