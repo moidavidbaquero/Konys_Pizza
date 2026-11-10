@@ -169,7 +169,7 @@ Vercel regenerará automáticamente el archivo `js/env.js` con tus credenciales 
 
 ### 5. Verifica el despliegue
 
-Entra a tu URL de Vercel (por ejemplo: `https://konyspizza-six.vercel.app/`):
+Entra a la URL de producción de tu proyecto. En este caso es `https://konyspizza-sigma.vercel.app/`. Puedes confirmar la URL exacta con `vercel project ls` o en **Vercel > tu proyecto > Domains**.
 
 - ✅ La sección **Mesas** debe mostrar las mesas disponibles.
 - ✅ La sección **Carta** debe mostrar los platos.
@@ -276,4 +276,3 @@ Instagram: @konyspizza
 ---
 
 *Desarrollado como proyecto académico de Full Stack con Selenium + Python para pruebas automatizadas.*
-

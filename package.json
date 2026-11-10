@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
     "check": "node --check js/config.js && node --check js/env.js && node --check js/ui.js && node --check js/supabase.js && node --check js/cliente.js && node --check js/admin.js"
   },
   "engines": {
@@ -18,5 +19,8 @@
     "restaurant",
     "reservations"
   ],
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0"
+  }
 }

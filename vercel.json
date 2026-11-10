@@ -1,5 +1,6 @@
 {
-  "buildCommand": "echo 'Sitio estático, sin build'",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node scripts/build.mjs",
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
@@ -13,7 +14,7 @@
     {
       "source": "/js/vendor/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
     },
     {
